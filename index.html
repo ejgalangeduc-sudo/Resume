@@ -21,6 +21,7 @@
             }
             .home__title-color { color: var(--first-color); }
             .button { background-color: var(--first-color); color: #fff; padding: .75rem 2rem; border-radius: .5rem; font-weight: 600; display: inline-block; margin-top: 2rem; }
+            .button-small { padding: .5rem 1rem; font-size: 0.8rem; margin-top: 1rem; }
             .section-title::after { background-color: var(--first-color); }
             .nav__logo, .nav__link.active, .home__social-icon, .skills__icon, .skills__subtitle, .about__subtitle { color: var(--first-color); }
             
@@ -31,6 +32,14 @@
             .footer__icon { font-size: 1.5rem; color: #fff; margin: 0 1rem; }
             
             .skills__bar { background-color: var(--first-color); }
+
+            /* Deployed Projects Styling */
+            .deployed__container { row-gap: 2rem; }
+            .deployed__content { background-color: #fff; border-radius: .5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 1.5rem; text-align: center; transition: .3s; }
+            .deployed__content:hover { box-shadow: 0 10px 15px rgba(0,0,0,0.15); }
+            .deployed__img { width: 100%; border-radius: .5rem; margin-bottom: 1rem; border: 1px solid #eee; }
+            .deployed__title { font-size: 1.1rem; color: var(--first-color); margin-bottom: .5rem; }
+            .deployed__subtitle { font-size: 0.85rem; color: var(--text-color); margin-bottom: 1rem; display: block; }
         </style>
     </head>
     <body>
@@ -90,14 +99,13 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <!-- File name updated as requested -->
                         <img src="assets/img/cholo_coding.png" alt="Eric Joseph coding">
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle"> You can also call me, Cholo</h2>
-                        <p class="about__text">I'm a passionate student developer, weaving magic with code both on the web and in the immersive realm of games. Currently a 3rd-year BS Information Systems student at Ateneo de Naga University, I focus on bridging the gap between technical development and efficient business processes.</p>
-                        <p class="about__text" style="margin-top: 1rem;">Whether it's crafting sleek UIs that guide users with intuitive flows or leading complex system automations like the ADNU Administrative process project, I thrive on the challenge of bringing ideas to life through the power of code and structured analysis.</p>           
+                        <h2 class="about__subtitle">Developing Scalable Solutions</h2>
+                        <p class="about__text">I am a highly motivated Information Systems student specializing in the intersection of technical development and business process optimization. With a strong foundation in UI/UX design and full-cycle system documentation, I transform complex manual processes into efficient digital experiences.</p>
+                        <p class="about__text" style="margin-top: 1rem;">From architecting Information Systems Plans to prototyping user-centric interfaces, I am dedicated to delivering high-impact solutions that drive organizational success. Let's build something exceptional together.</p>           
                     </div>                                   
                 </div>
             </section>
@@ -109,7 +117,7 @@
                 <div class="skills__container bd-grid">          
                     <div>
                         <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">My Professional skills revolve around crafting websites with clean HTML and vibrant CSS, bringing stories to life in engaging Scratch games, and tackling complex problems with C++ and Information Systems Planning. I specialize in turning user requirements into functional prototypes that deliver seamless digital experiences.</p>
+                        <p class="skills__text">My expertise spans front-end development, interactive game design, and strategic Information Systems planning. I focus on technical precision and creative problem-solving to meet diverse project requirements.</p>
                         
                         <div class="skills__data">
                             <div class="skills__names">
@@ -150,6 +158,34 @@
                     
                     <div>              
                         <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== DEPLOYED PROJECTS =====-->
+            <section class="deployed section" id="deployed">
+                <h2 class="section-title">Deployed Projects</h2>
+
+                <div class="deployed__container bd-grid">
+                    <div class="deployed__content">
+                        <img src="assets/img/deployed1.png" alt="Project Smile Preview" class="deployed__img">
+                        <h3 class="deployed__title">Project Smile</h3>
+                        <span class="deployed__subtitle">UI/UX Prototype & Web Interface</span>
+                        <a href="#" class="button button-small">View Live</a>
+                    </div>
+
+                    <div class="deployed__content">
+                        <img src="assets/img/deployed2.png" alt="ADNU Automation Preview" class="deployed__img">
+                        <h3 class="deployed__title">ADNU Process Automation</h3>
+                        <span class="deployed__subtitle">Administrative Office Information System</span>
+                        <a href="#" class="button button-small">View Case Study</a>
+                    </div>
+
+                    <div class="deployed__content">
+                        <img src="assets/img/deployed3.png" alt="DailyMood Preview" class="deployed__img">
+                        <h3 class="deployed__title">DailyMood App</h3>
+                        <span class="deployed__subtitle">Tracking Application Interface</span>
+                        <a href="#" class="button button-small">View Prototype</a>
                     </div>
                 </div>
             </section>
