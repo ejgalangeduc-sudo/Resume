@@ -229,21 +229,27 @@
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+      
+         <!--===== CONTACT =====-->
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
 
-                <div class="contact__container bd-grid">
-                    <!-- Netlify Form Handling -->
-                    <form name="portfolio-contact" method="POST" data-netlify="true" class="contact__form">
-                        <input type="hidden" name="form-name" value="portfolio-contact" />
-                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
-                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                        <textarea name="message" placeholder="Your Message" cols="0" rows="10" class="contact__input" required></textarea>
-                        <button type="submit" class="contact__button button">Send Message</button>
-                    </form>
-                </div>
-            </section>
+    <div class="contact__container bd-grid">
+        <!-- Using your Formspree endpoint -->
+        <form action="https://formspree.io/f/xbdwdqzz" method="POST" class="contact__form">
+            
+            <!-- The 'name' attribute is required for Formspree to identify the data -->
+            <input type="text" name="name" placeholder="Name" class="contact__input" required>
+            <input type="email" name="email" placeholder="Email" class="contact__input" required>
+            
+            <textarea name="message" placeholder="Your Message" cols="0" rows="10" class="contact__input" required></textarea>
+            
+            <!-- Use type="submit" so the form actually fires -->
+            <button type="submit" class="contact__button button">Send Message</button>
+            
+        </form>
+    </div>
+</section>
         </main>
 
         <!--===== FOOTER =====-->
