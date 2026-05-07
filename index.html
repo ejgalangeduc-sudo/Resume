@@ -5,13 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="Assets/css/styles.css">
-
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Portfolio | Eric Joseph P. Galang Jr.</title>
         <style>
-            /* Midnight Navy Professional Theme Integration */
             :root {
                 --first-color: #1A365D; 
                 --first-color-alt: #2A4365;
@@ -19,245 +17,176 @@
                 --text-color: #4A5568;
             }
             .home__title-color { color: var(--first-color); }
-            .button { background-color: var(--first-color); color: #fff; padding: .75rem 2rem; border-radius: .5rem; font-weight: 600; display: inline-block; margin-top: 2rem; border: none; cursor: pointer; }
+            .button { background-color: var(--first-color); color: #fff; padding: .75rem 2rem; border-radius: .5rem; font-weight: 600; display: inline-block; margin-top: 1rem; border: none; cursor: pointer; text-decoration: none; }
+            .button-light { background-color: #edf2f7; color: var(--first-color); border: 1px solid var(--first-color); }
+            
             .section-title::after { background-color: var(--first-color); }
             .nav__logo, .nav__link.active, .home__social-icon, .skills__icon, .skills__subtitle, .about__subtitle { color: var(--first-color); }
             
-            /* Footer Styling */
-            .footer { background-color: var(--first-color); color: #fff; text-align: center; padding: 2rem 0; }
-            .footer__title { margin-bottom: 2rem; font-size: 2rem; color: #fff; }
-            .footer__social { margin-bottom: 3rem; }
-            .footer__icon { font-size: 1.5rem; color: #fff; margin: 0 1rem; }
-            
-            .skills__bar { background-color: var(--first-color); }
+            /* Grid and Layout Fixes */
+            .work__container { row-gap: 2rem; }
+            .work__card { background: #fff; padding: 1rem; border-radius: .5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+            .work__img { height: 200px; border-radius: .5rem; overflow: hidden; margin-bottom: 1rem; }
+            .work__img img { width: 100%; height: 100%; object-fit: cover; }
+            .work__text { font-size: 0.85rem; color: var(--text-color); margin-top: 0.5rem; line-height: 1.4; }
+            .work__title { font-weight: 600; color: var(--first-color); display: block; margin-top: 0.5rem; }
 
-            /* Image Fit Fixes for Projects */
-            .work__img {
-                height: 250px; 
-                overflow: hidden;
-                border-radius: .5rem;
-                box-shadow: 0 4px 25px rgba(14,36,49,0.15);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #f4f4f4;
-            }
-            .work__img img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; 
-                object-position: top; 
-                transition: transform 0.3s;
-            }
-            .work__img img:hover {
-                transform: scale(1.05);
-            }
+            .footer { background-color: var(--first-color); color: #fff; text-align: center; padding: 2rem 0; }
+            .footer__icon { font-size: 1.5rem; color: #fff; margin: 0 1rem; }
+
+            /* Reflection Section Styling */
+            .reflection__container { background: #f9fafb; padding: 2rem; border-radius: .5rem; border-left: 5px solid var(--first-color); }
+            .reflection__item { margin-bottom: 1.5rem; }
+            .reflection__subtitle { font-weight: 600; color: var(--first-color); margin-bottom: 0.5rem; display: block; }
         </style>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Cholo</a>
-                </div>
-
+                <div><a href="#" class="nav__logo">Cholo</a></div>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#deployed" class="nav__link">Websites</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Games</a></li>
+                        <li class="nav__item"><a href="#artifacts" class="nav__link">Artifacts</a></li>
+                        <li class="nav__item"><a href="#reflection" class="nav__link">Reflection</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
+                <div class="nav__toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
             </nav>
         </header>
 
         <main class="l-main">
-            <!--===== HOME =====-->
+            <!--===== HOME (Objective 2: Personal Branding) =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Eric Joseph, </span><br> A Web Developer / <br> IS Project Manager</h1>
-                    <a href="#contact" class="button">Contact</a>
+                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Eric Joseph,</span><br>IS Project Manager</h1>
+                    <!-- GUIDELINE REQUIREMENT: Career goal statement -->
+                    <p style="margin-top: 1rem; color: var(--text-color);">My goal is to bridge the gap between technical complexity and business efficiency through professional communication and user-centric Information Systems design.</p>
+                    
+                    <div class="home__buttons">
+                        <a href="#contact" class="button">Hire Me</a>
+                        <!-- GUIDELINE REQUIREMENT: Application Letter Hyperlink -->
+                        <a href="YOUR_LINK_HERE" target="_blank" class="button button-light">Application Letter</a>
+                    </div>
                 </div>
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/eric-joseph-jr-p-galang-547ab42a4/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.behance.net/ericjogalang" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
                     <a href="https://github.com/Cholsss" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0" mask-type="alpha"><path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/></mask>
                         <g mask="url(#mask0)">
-                            <path fill="transparent" d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
                             <image class="home__blob-img" x="50" y="30" width="400" href="Assets/img/cholo.png"/>
                         </g>
                     </svg>
                 </div>
             </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
+            <!--===== ABOUT (Guideline 3a: Short Bio) =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About Me</h2>
                 <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="Assets/img/cholo_coding.png" alt="Eric Joseph coding">
-                    </div>
-                    
+                    <div class="about__img"><img src="Assets/img/cholo_coding.png" alt="Profile Photo"></div>
                     <div>
-                        <h2 class="about__subtitle">Developing Scalable Solutions</h2>
-                        <p class="about__text">I am a highly motivated Information Systems student specializing in the intersection of technical development and business process optimization. With a strong foundation in UI/UX design and full-cycle system documentation, I transform complex manual processes into efficient digital experiences.</p>
-                        <p class="about__text" style="margin-top: 1rem;">From architecting Information Systems Plans to prototyping user-centric interfaces, I am dedicated to delivering high-impact solutions that drive organizational success. Let's build something exceptional together.</p>           
-                    </div>                                   
+                        <h2 class="about__subtitle">Professional Identity</h2>
+                        <!-- GUIDELINE REQUIREMENT: 3-5 Sentences Bio -->
+                        <p class="about__text">I am an Information Systems student at [Your University], dedicated to optimizing organizational workflows through digital transformation. My expertise lies in UI/UX prototyping and full-cycle system documentation, ensuring technical solutions align with user needs. I focus on delivering high-impact projects that demonstrate both technical proficiency and professional communication excellence.</p>
+                    </div>                                    
                 </div>
             </section>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">My expertise spans front-end development, interactive game design, and strategic Information Systems planning. I focus on technical precision and creative problem-solving to meet diverse project requirements.</p>
-                        
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5 / CSS3</span>
-                            </div>
-                            <div class="skills__bar" style="background-color: var(--first-color); width: 95%; height: .25rem; border-radius: .5rem;"></div>
-                            <div><span class="skills__percentage">95%</span></div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI (FIGMA)</span>
-                            </div>
-                            <div class="skills__bar" style="background-color: var(--first-color); width: 90%; height: .25rem; border-radius: .5rem;"></div>
-                            <div><span class="skills__percentage">90%</span></div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bx-analyse skills__icon'></i>
-                                <span class="skills__name">IS PLANNING</span>
-                            </div>
-                            <div class="skills__bar" style="background-color: var(--first-color); width: 85%; height: .25rem; border-radius: .5rem;"></div>
-                            <div><span class="skills__percentage">85%</span></div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar" style="background-color: var(--first-color); width: 65%; height: .25rem; border-radius: .5rem;"></div>
-                            <div><span class="skills__percentage">65%</span></div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="Assets/img/work3.jpg" alt="" class="skills__img">
+            <!--===== VIDEO RESUME (Guideline 3b) =====-->
+            <section class="section" id="video-resume">
+                <h2 class="section-title">Video Resume</h2>
+                <div class="bd-grid" style="text-align: center;">
+                    <p style="margin-bottom: 1rem;">Watch a brief overview of my professional qualifications and career goals.</p>
+                    <div style="background: #000; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: .5rem;">
+                        <!-- Replace with your YouTube or Drive embed link -->
+                        <p>Embed Video Link Here</p>
                     </div>
                 </div>
             </section>
 
-            <!--===== WEBSITES DEPLOYED =====-->
-            <section class="work section" id="deployed">
-                <h2 class="section-title">Websites Deployed</h2>
-
+            <!--===== ARTIFACTS (Guideline 3d: 3-5 outputs with Context) =====-->
+            <section class="work section" id="artifacts">
+                <h2 class="section-title">Sample Works & Artifacts</h2>
                 <div class="work__container bd-grid">
-                    <a href="https://www.figma.com/proto/xhPMlfKYJdOUJTAJbQdKmg/Project-Smile?t=W9SbWXy5z0EPUOed-1" target="_blank" class="work__img">
-                        <img src="Assets/img/projectsmile.png" alt="Project Smile Figma Prototype">
-                    </a>
                     
-                    <a href="https://seiki11.onrender.com/?fbclid=IwY2xjawRb-v9leHRuA2FlbQIxMABicmlkETFkdUZUOHVUdFFxSmg4dWIyc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmOuK4cWo7_TFKeV0wRqyO5645NJ4CKAoohg-XZFr5cLFC1vOvz7nkK3oSYi_aem_NZdaxqkgceyR1iSipFnsvQ" target="_blank" class="work__img">
-                        <img src="Assets/img/seiki.png" alt="Seiki: Process Automation System">
-                    </a>
+                    <!-- Artifact 1 -->
+                    <div class="work__card">
+                        <a href="https://seiki11.onrender.com/" target="_blank" class="work__img">
+                            <img src="Assets/img/seiki.png" alt="Seiki System">
+                        </a>
+                        <span class="work__title">Seiki: Process Automation</span>
+                        <p class="work__text"><strong>Context:</strong> Developed as a full-stack automation system to streamline manual workflows. This project demonstrates my ability to handle system logic and professional technical documentation.</p>
+                    </div>
 
-                    <a href="#" class="work__img">
-                        <img src="Assets/img/deployed3.png" alt="DailyMood Web Interface">
-                    </a>
+                    <!-- Artifact 2 -->
+                    <div class="work__card">
+                        <a href="#" class="work__img">
+                            <img src="Assets/img/projectsmile.png" alt="Figma Prototype">
+                        </a>
+                        <span class="work__title">Project Smile UI/UX</span>
+                        <p class="work__text"><strong>Context:</strong> A high-fidelity prototype designed in Figma. This artifact showcases my skills in audience awareness and visual communication principles for digital interfaces.</p>
+                    </div>
+
+                    <!-- Artifact 3 -->
+                    <div class="work__card">
+                        <a href="#" class="work__img">
+                            <img src="Assets/img/bingo.png" alt="C++ Project">
+                        </a>
+                        <span class="work__title">C++ Logic Development</span>
+                        <p class="work__text"><strong>Context:</strong> A logical programming output focused on algorithmic efficiency. This represents my foundational technical communication and problem-solving skills.</p>
+                    </div>
+
                 </div>
             </section>
 
-            <!--===== GAME PROJECTS =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Game Projects</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="https://scratch.mit.edu/projects/938124085" class="work__img"><img src="Assets/img/gameproject1.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939330739/" class="work__img"><img src="Assets/img/gameproject2.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/938215185/" class="work__img"><img src="Assets/img/gameproject3.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939363783" class="work__img"><img src="Assets/img/gameproject4.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939314923" class="work__img"><img src="Assets/img/gameproject5.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/938242384/" class="work__img"><img src="Assets/img/gameproject6.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939602761" class="work__img"><img src="Assets/img/gameproject7.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939596084/" class="work__img"><img src="Assets/img/gameproject8.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939390917/" class="work__img"><img src="Assets/img/gameproject9.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939568000/" class="work__img"><img src="Assets/img/gameproject10.png" alt=""></a>
-                    <a href="https://scratch.mit.edu/projects/939655239/" class="work__img"><img src="Assets/img/gameproject11.png" alt=""></a>
-                </div>
-            </section>
-
-            <!--===== C++ PROJECTS =====-->
-            <section class="work section">
-                <h2 class="section-title">C++ Projects</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="https://www.online-cpp.com/IQdFf7WHjV" class="work__img"><img src="Assets/img/bingo.png" alt=""></a>
-                    <a href="https://www.online-cpp.com/FQjvn29MCw" class="work__img"><img src="Assets/img/5numcalc.png" alt=""></a>
-                    <a href="https://www.online-cpp.com/dM6gz7ecHo" class="work__img"><img src="Assets/img/numberguessgame.png" alt=""></a>
-                    <a href="https://www.online-cpp.com/rFJ71k9LQY" class="work__img"><img src="Assets/img/tempconverter.png" alt=""></a>
-                    <a href="https://www.online-cpp.com/6E74tVxKkl" class="work__img"><img src="Assets/img/tictaclol.png" alt=""></a>
-                    <a href="https://www.online-cpp.com/X90jdr1bim" class="work__img"><img src="Assets/img/hiluworld.png" alt=""></a>
+            <!--===== REFLECTION (Guideline 3e) =====-->
+            <section class="section" id="reflection">
+                <h2 class="section-title">Reflection</h2>
+                <div class="reflection__container bd-grid">
+                    <div class="reflection__item">
+                        <span class="reflection__subtitle">Learning Insights</span>
+                        <p>Through the Professional Communication course, I learned that effective technical work is only as good as its delivery. I've mastered how to tailor my language to both technical and non-technical stakeholders.</p>
+                    </div>
+                    <div class="reflection__item">
+                        <span class="reflection__subtitle">Strengths & Growth</span>
+                        <p>My strengths include visual hierarchy and clarity in writing. This portfolio represents my growth from a student developer to a professional communicator ready for the industry.</p>
+                    </div>
                 </div>
             </section>
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-
                 <div class="contact__container bd-grid">
-                    <!-- Formspree Integration -->
                     <form action="https://formspree.io/f/xbdwdqzz" method="POST" class="contact__form">
                         <input type="text" name="name" placeholder="Name" class="contact__input" required>
                         <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                        <textarea name="message" placeholder="Your Message" cols="0" rows="10" class="contact__input" required></textarea>
+                        <textarea name="message" placeholder="Message" cols="0" rows="10" class="contact__input" required></textarea>
                         <button type="submit" class="contact__button button">Send Message</button>
                     </form>
                 </div>
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">Eric Joseph P. Galang Jr.</p>
             <div class="footer__social">
-                <a href="https://www.facebook.com/ericjoseph.chols" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://instagram.com/cholooos?igshid=OGQ5ZDc2ODk2ZA==" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://twitter.com/cholstrssd " class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-                <a href="https://www.linkedin.com/in/eric-joseph-jr-p-galang-547ab42a4/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
             </div>
+            <p>&#169; 2026 Professional Portfolio. All rights reserved.</p>
         </footer>
 
-        <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
         <script src="Assets/js/main.js"></script>
     </body>
 </html>
