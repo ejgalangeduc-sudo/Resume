@@ -212,16 +212,25 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /*BUTTONS*/
+.home__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  margin-top: var(--mb-4);
+}
+
 .button {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: .75rem 2.5rem;
+  padding: .75rem 1.5rem;
   font-weight: var(--font-semi);
   border-radius: .5rem;
   transition: .3s;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .button:hover {
@@ -233,7 +242,6 @@ img { max-width: 100%; height: auto; display: block; }
   background-color: #edf2f7;
   color: var(--first-color);
   border: 1px solid var(--first-color);
-  margin-left: 1rem;
 }
 
 /* ===== WORK =====*/
@@ -291,10 +299,14 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 4rem 0 2rem;
     text-align: center;
   }
+  .home__buttons {
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping only on very small mobile screens */
+  }
   .home__social { justify-content: center; }
   .home__img { order: -1; }
   .home__blob { width: 280px; }
-  .button-light { margin-left: 0; margin-top: 1rem; }
+  .button-light { margin-left: 0; }
 }
 
 @media screen and (min-width: 768px) {
