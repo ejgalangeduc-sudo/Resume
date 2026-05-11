@@ -244,6 +244,15 @@ img { max-width: 100%; height: auto; display: block; }
   border: 1px solid var(--first-color);
 }
 
+.home__subtitle {
+    display: block; /* Moves it to a new line */
+    font-size: 1.25rem; /* Smaller than the main title */
+    color: var(--text-color); /* Uses the secondary text color */
+    font-weight: 500; /* Medium weight */
+    margin-top: 0.5rem;
+    opacity: 0.8; /* Makes it look slightly more like a subtitle */
+}
+
 /* ===== WORK =====*/
 .work__container {
   display: grid;
